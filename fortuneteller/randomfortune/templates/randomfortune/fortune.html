@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Django Fortune Teller</title>
+ <style>
+   body {
+     text-align: center;
+   }
+   h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #583759;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+   }
+   #fortune {
+    line-height: 1.5;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 64px;
+   }
+   button {
+    padding: 10px 20px;
+    background-color: #583759;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+   }
+   button:hover {
+    background-color: #774a89;
+    cursor: pointer;    
+   }
+ </style>
+ <script>
+    function refreshPage() {
+      location.reload(); 
+    }
+  </script>
+</head>
+<body>
+ 
+ <h1>Here is your fortune:</h1>
+ 
+ <p id="fortune">{{ fortune }}</p> <br>
+
+ <button onclick="refreshPage()">Another Fortune</button>
+ 
+</body>
+</html>
